@@ -12,5 +12,10 @@
     ],
     "idf.port": "/dev/ttyUSB0",
     "idf.pythonBinPath": "/home/jdtech/ESP/esp-idf-tools/python_env/idf5.3_py3.10_env/bin/python",
-    "idf.toolsPath": "/home/jdtech/ESP/esp-idf-tools"
+    "idf.toolsPath": "/home/jdtech/ESP/esp-idf-tools",
+    "idf.flashType": "UART",
+    "files.associations": {
+        "gpio_hal.h": "c",
+        "gpio.h": "c"
+    },
 }
