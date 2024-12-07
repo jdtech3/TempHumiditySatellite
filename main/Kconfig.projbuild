@@ -24,4 +24,16 @@ menu "TempHumiditySatellite"
     config ESP_WIFI_PASSWORD
         string "WiFi password"
 
+    config MQTT_URL
+        string "MQTT broker URL"
+
+    config MQTT_USERNAME
+        string "MQTT username"
+    
+    config MQTT_PASSWORD
+        string "MQTT password"
+
+    config MQTT_TOPIC
+        string "MQTT topic to publish sensor data to"
+
 endmenu

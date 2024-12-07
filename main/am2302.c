@@ -26,11 +26,9 @@ int am2302_read(am2302_reading_t* reading, gpio_num_t pin) {
     GPIO_LOW(pin);
     usleep(1500);       // 1-10 ms
     GPIO_HIGH(pin);
-    usleep(30);         // 20-40 us
     
     // check sensor ack
     gpio_set_direction(pin, GPIO_MODE_INPUT);
-    usleep(40);
     uint8_t ack1 = gpio_get_level(pin);
     usleep(80);
     uint8_t ack2 = gpio_get_level(pin);

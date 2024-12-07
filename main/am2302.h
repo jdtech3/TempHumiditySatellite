@@ -1,9 +1,11 @@
 #pragma once
 
-#include <unistd.h>         // general
-#include <esp_log.h>        // logging
-#include <driver/gpio.h>    // hardware
-#include <esp_timer.h>      // hardware
+#include <unistd.h>             // general
+#include <freertos/FreeRTOS.h>  // RTOS
+#include <freertos/task.h>
+#include <esp_log.h>            // logging
+#include <driver/gpio.h>        // hardware
+#include <esp_timer.h>
 
 #include "util.h"
 #include "error.h"

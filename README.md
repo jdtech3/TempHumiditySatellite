@@ -7,8 +7,8 @@ Uses ESP-SDK with minimal sample template as base.
 ### Progress
 
 - [x] AM2302 driver
-- [ ] WiFi connection
-- [ ] MQTT publish
+- [x] WiFi connection
+- [x] MQTT publish
 - [ ] Cleaner code: this is my first time using ESP-SDK so bear with me :sweat_smile:
 
 ### License
