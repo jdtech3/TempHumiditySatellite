@@ -1,10 +1,3 @@
-/*
- * SPDX-FileCopyrightText: 2010-2022 Espressif Systems (Shanghai) CO LTD
- *
- * SPDX-License-Identifier: CC0-1.0
- */
-
-
 #include <stdio.h>              // general
 #include <stdbool.h>
 #include <unistd.h>
@@ -21,22 +14,6 @@
 static const char* TAG = "main";    // logging
 #define ENABLE_DEBUG_LOGS
 
-// Onboard LED
-
-void led_init(gpio_num_t pin) {
-    const gpio_config_t led_pin_config = {
-        .pin_bit_mask = 1 << pin,
-        .mode = GPIO_MODE_OUTPUT,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .intr_type = GPIO_INTR_DISABLE
-    };
-    gpio_config(&led_pin_config);
-    GPIO_LOW(pin);      // default off
-}
-
-// Rest
-
 void init() {
     // logging
     esp_log_level_set("*", ESP_LOG_WARN);
@@ -45,13 +22,15 @@ void init() {
         esp_log_level_set("am2302", ESP_LOG_DEBUG);
     #else
         esp_log_level_set(TAG, ESP_LOG_INFO);
+        esp_log_level_set("am2302", ESP_LOG_INFO);
     #endif
 
     ESP_LOGW(TAG, "TempHumiditySatellite starting...");
     ESP_LOGW(TAG, "    Time between readings: %.0f s", CONFIG_AM2302_READING_PERIOD / 1000.0f);
+    ESP_LOGW(TAG, "    WiFi SSID: %s", CONFIG_ESP_WIFI_SSID);
 
     am2302_init(CONFIG_AM2302_PIN);
-    led_init(CONFIG_LED_PIN);
+    generic_output_gpio_init(CONFIG_LED_PIN);
 
     GPIO_HIGH(CONFIG_LED_PIN);
     vTaskDelay(500 / portTICK_PERIOD_MS);

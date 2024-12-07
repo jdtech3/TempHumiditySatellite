@@ -13,3 +13,4 @@
 // prototypes
 int block_until_posedge(gpio_num_t pin, int timeout);
 int block_until_negedge(gpio_num_t pin, int timeout);
+void generic_output_gpio_init(gpio_num_t pin);

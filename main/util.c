@@ -27,3 +27,16 @@ int block_until_negedge(gpio_num_t pin, int timeout) {  // timeout in microsecon
     
     return 0;
 }
+
+void generic_output_gpio_init(gpio_num_t pin) {
+    const gpio_config_t pin_config = {
+        .pin_bit_mask = 1 << pin,
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&pin_config);
+    GPIO_LOW(pin);      // default off
+}
+

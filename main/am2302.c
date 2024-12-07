@@ -16,6 +16,8 @@ void am2302_init(gpio_num_t pin) {
     // first reading always fails
     am2302_reading_t dummy;
     am2302_read(&dummy, pin);
+
+    ESP_LOGI(TAG, "Init OK");
 }
 
 int am2302_read(am2302_reading_t* reading, gpio_num_t pin) {
