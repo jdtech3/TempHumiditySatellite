@@ -1,3 +1,8 @@
+# IDE
+.vscode/
+
+# ESP-IDF generated
+.devcontainer/
 build/
 sdkconfig
 sdkconfig.old
