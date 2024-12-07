@@ -1,3 +1,21 @@
+## TempHumiditySatellite
+
+Simple ESP32 temperature and humidity sensor implementation based on AM2302 sensor and designed to output to HomeAssistant via MQTT.
+
+Uses ESP-SDK with minimal sample template as base.
+
+### Progress
+
+- [x] AM2302 driver
+- [ ] WiFi connection
+- [ ] MQTT publish
+- [ ] Cleaner code: this is my first time using ESP-SDK so bear with me :sweat_smile:
+
+### License
+
+*This project is licensed under **NONE**/**TBD**. For more information, please see **TBD**.*
+
+<!---
 # _Sample project_
 
 (See the README.md file in the upper level 'examples' directory for more information about examples.)
@@ -30,3 +48,4 @@ Below is short explanation of remaining files in the project folder.
 ```
 Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
 They are not used or needed when building with CMake and idf.py.
+--->
