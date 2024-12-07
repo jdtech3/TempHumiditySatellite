@@ -1,4 +1,4 @@
-## TempHumiditySatellite
+## TempHumiditySensor
 
 Simple ESP32 temperature and humidity sensor implementation based on AM2302 sensor and designed to output to HomeAssistant via MQTT.
 
