@@ -16,6 +16,9 @@
     "idf.flashType": "UART",
     "files.associations": {
         "gpio_hal.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "soc.h": "c",
+        "stdio.h": "c"
     },
+    "idf.flashBaudRate": "921600",
 }

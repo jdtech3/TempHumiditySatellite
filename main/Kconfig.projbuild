@@ -1,0 +1,27 @@
+menu "TempHumiditySatellite"
+
+    config AM2302_PIN
+        int "AM2302 pin"
+        default 23
+        help
+            GPIO pin that AM2302 one-wire data output is connected to
+
+    config LED_PIN
+        int "LED pin"
+        default 2
+        help
+            GPIO pin that indicator LED is connected to (defaults to onboard LED)
+
+    config AM2302_READING_PERIOD
+        int "AM2302 reading period (ms)"
+        default 2000
+        help
+            Time to wait between AM2302 measurements
+
+    config ESP_WIFI_SSID
+        string "WiFi SSID"
+
+    config ESP_WIFI_PASSWORD
+        string "WiFi password"
+
+endmenu
